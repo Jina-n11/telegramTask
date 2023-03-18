@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">telegramTask</string>
+    <string name="name">Jinana</string>
+    <string name="status">online</string>
+    <string name="numberPhoneText">+9647737984648</string>
+    <string name="userName">\'@Gina_n11</string>
+    <string name="devices">Devices</string>
+    <string name="chat_settings">Chat Settings</string>
+    <string name="data_and_storage">Data and Storage</string>
+    <string name="privacy_and_security">Privacy and Security</string>
+    <string name="notification_and_sounds">Notification and Sounds</string>
+    <string name="account">Account</string>
+    <string name="top_to_change_phone_number">Top to change phone number</string>
+    <string name="accountText">Account</string>
+    <string name="settings">Settings</string>
+</resources>

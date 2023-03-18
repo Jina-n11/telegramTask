@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="minSmallSpace">4dp</dimen>
+    <dimen name="smallSpace">8dp</dimen>
+    <dimen name="midSpace">12dp</dimen>
+    <dimen name="normalSpace">16dp</dimen>
+    <dimen name="largeSpace">24dp</dimen>
+    <dimen name="bigSpace">42dp</dimen>
+
+    <dimen name="bodyTextSize">12sp</dimen>
+    <dimen name="subTitleTextSize">14sp</dimen>
+    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="headerTextSize">20sp</dimen>
+    <dimen name="largeHeaderTextSize">24sp</dimen>
+    <dimen name="heightImage">350dp</dimen>
+</resources>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    app:layoutDescription="@xml/activity_main_scene">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="centerCrop"
+            android:scaleX="1.3"
+            app:shapeAppearance="@style/reduceImage"
+            android:src="@drawable/clude" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/largeSpace"
+            android:layout_marginStart="@dimen/normalSpace"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/arrow"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/normalSpace"
+            android:layout_marginStart="@dimen/normalSpace"
+            android:layout_marginTop="@dimen/bigSpace"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/menu"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/normalSpace"
+            android:layout_marginStart="@dimen/normalSpace"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintEnd_toStartOf="@id/menu"
+            android:src="@drawable/search"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/nameAndStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/normalSpace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/imageProfile">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="@dimen/titleTextSize"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textSize="@dimen/bodyTextSize"
+                android:textColor="@color/secondaryColor" />
+
+        </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addImageIcone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/add_image"
+        android:layout_marginBottom="-30dp"
+        android:backgroundTint="@color/primaryColor"
+        android:layout_marginEnd="@dimen/normalSpace"
+        android:background="@drawable/image_radius"
+        app:layout_constraintBottom_toTopOf="@id/account"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normalSpace"
+            android:background="@color/backgroundContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageProfile">
+
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accountText"
+                android:textSize="@dimen/titleTextSize"
+                android:textColor="@color/primaryColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/account"/>
+
+            <LinearLayout
+                android:id="@+id/accountNumberPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/accountText"
+                app:layout_constraintTop_toBottomOf="@id/accountText">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numberPhoneText"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_to_change_phone_number"
+                    android:textSize="@dimen/bodyTextSize"
+                    android:layout_marginTop="@dimen/minSmallSpace"
+                    android:textColor="@color/secondaryColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/account"
+                app:layout_constraintTop_toBottomOf="@id/accountNumberPhone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userName"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textSize="@dimen/bodyTextSize"
+                    android:layout_marginTop="@dimen/minSmallSpace"
+                    android:textColor="@color/secondaryColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/account"
+                app:layout_constraintTop_toBottomOf="@id/accountUserName">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Believe you can and you're halfway there ...The chance"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bio"
+                    android:textSize="@dimen/bodyTextSize"
+                    android:layout_marginTop="@dimen/minSmallSpace"
+                    android:textColor="@color/secondaryColor" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normalSpace"
+            android:padding="@dimen/normalSpace"
+            android:background="@color/backgroundContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/account">
+
+            <TextView
+                android:id="@+id/settingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textSize="@dimen/titleTextSize"
+                android:textColor="@color/primaryColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/setting"/>
+
+            <LinearLayout
+                android:id="@+id/settingNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/setting"
+                app:layout_constraintTop_toBottomOf="@id/settingText">
+
+                <ImageView
+                    android:id="@+id/notificationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/midSpace"
+                    android:src="@drawable/notification"
+                    app:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_and_sounds"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingPrivicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/setting"
+                app:layout_constraintTop_toBottomOf="@id/settingNotification">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/midSpace"
+                    android:src="@drawable/privacy"
+                    app:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_and_security"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/setting"
+                app:layout_constraintTop_toBottomOf="@id/settingPrivicy">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/midSpace"
+                    android:src="@drawable/data"
+                    app:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_and_storage"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/setting"
+                app:layout_constraintTop_toBottomOf="@id/settingData">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/midSpace"
+                    android:src="@drawable/chat"
+                    app:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_settings"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/normalSpace"
+                app:layout_constraintStart_toStartOf="@id/setting"
+                app:layout_constraintTop_toBottomOf="@id/settingChat">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/midSpace"
+                    android:src="@drawable/device"
+                    app:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/devices"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

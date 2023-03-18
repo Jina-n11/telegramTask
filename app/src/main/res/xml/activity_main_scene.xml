@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/mid">
+        <Constraint
+            android:id="@+id/imageProfile"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="@dimen/normalSpace"
+            app:layout_constraintTop_toBottomOf="@+id/arrow"
+            app:layout_constraintStart_toStartOf="@+id/arrow"
+            android:src="@drawable/clude"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/reduceImageMid"
+            android:layout_marginBottom="@dimen/largeSpace" />
+
+        <Constraint
+            android:id="@+id/nameAndStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/normalSpace"
+            app:layout_constraintStart_toEndOf="@id/imageProfile"
+            app:layout_constraintTop_toTopOf="@id/imageProfile"
+            app:layout_constraintBottom_toBottomOf="@id/imageProfile"/>
+
+
+    </ConstraintSet>
+
+
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/imageProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/largeSpace"
+            app:layout_constraintTop_toTopOf="@+id/arrow"
+            app:layout_constraintStart_toEndOf="@+id/arrow"
+            android:src="@drawable/clude"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/reduceImage"
+            android:layout_marginBottom="@dimen/bigSpace" />
+
+        <Constraint
+            android:id="@+id/nameAndStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/normalSpace"
+            app:layout_constraintStart_toEndOf="@id/imageProfile"
+            app:layout_constraintTop_toTopOf="@id/imageProfile" />
+
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@+id/mid"
+        app:constraintSetStart="@id/start">
+
+        <OnSwipe
+            app:touchRegionId="@+id/account"
+            app:dragDirection="dragUp" />
+
+    </Transition>
+
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@id/mid">
+
+        <OnSwipe
+            app:touchRegionId="@+id/account"
+            app:dragDirection="dragUp" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                app:motionTarget="@+id/addImageIcone"
+                app:framePosition="93"
+                android:alpha="100"/>
+
+            <KeyAttribute
+                app:motionTarget="@+id/addImageIcone"
+                app:framePosition="100"
+                android:alpha="0"/>
+
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>
+
+
