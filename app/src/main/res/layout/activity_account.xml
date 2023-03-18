@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/accounts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundContainer"
+    android:padding="@dimen/normalSpace">
+
+    <TextView
+        android:id="@+id/accountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accountText"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/titleTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/accounts" />
+
+    <LinearLayout
+        android:id="@+id/accountNumberPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalSpace"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/accountText"
+        app:layout_constraintTop_toBottomOf="@id/accountText">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numberPhoneText"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minSmallSpace"
+            android:text="@string/top_to_change_phone_number"
+            android:textColor="@color/secondaryColor"
+            android:textSize="@dimen/bodyTextSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accountUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalSpace"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/accounts"
+        app:layout_constraintTop_toBottomOf="@id/accountNumberPhone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minSmallSpace"
+            android:text="Username"
+            android:textColor="@color/secondaryColor"
+            android:textSize="@dimen/bodyTextSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accountBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalSpace"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/accounts"
+        app:layout_constraintTop_toBottomOf="@id/accountUserName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bioText"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minSmallSpace"
+            android:text="@string/bio"
+            android:textColor="@color/secondaryColor"
+            android:textSize="@dimen/bodyTextSize" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
